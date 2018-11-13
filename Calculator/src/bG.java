@@ -1,8 +1,10 @@
 
 public class bG {
 	private static double userInput, birthMonth, birthDay;
-	public static void birthdayGame() throws InterruptedException {
+	public static int birthdayGame() throws InterruptedException {
+		boolean repeat = true;
 		do {
+			
 			try {
 				System.out.print("1.Determine your birth month (January=1, February=2, and so on).\n"
 						+ "2.Multiply that number by 5.\n" + "3.Add 6 to that number.\n"
@@ -20,15 +22,16 @@ public class bG {
 				(int)birthMonth +
 				" and your Birthday is "+
 				(int)birthDay);
-				// Note To Self: Remember to set repeat to true in main (in each switch case) so it wont cause problems later on...
-				Calc.repeat = false;
+				repeat = false;
 				Thread.sleep(5000);
 			} catch (Exception e) {
 				System.out.println("Invalid Choice");
 			}
-		} while (Calc.repeat);
-		Calc.menuMain();
+		} while (repeat);
+		return (int)birthDay;
 		
 	}
 	
-}
+		
+	}
+
