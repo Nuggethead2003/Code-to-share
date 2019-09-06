@@ -9,6 +9,8 @@ public class Calc {
 	private static String choice;
 
 	public static void main(String[] args) throws InterruptedException {
+		RPS rps = new RPS();
+		rps();
 		repeat = true;
 		do {
 			try {
